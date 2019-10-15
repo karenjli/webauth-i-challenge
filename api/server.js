@@ -11,7 +11,7 @@ const server = express();
 const sessionConfiguration = {
   name: "cookie",
   secret: "This is a secret",
-  cooke: {
+  cookie: {
     httpOnly: false,
     maxAge: 1000 * 60 * 60,
     secure: false,

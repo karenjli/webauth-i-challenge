@@ -1,8 +1,9 @@
 const router = require("express").Router();
-const auth = require("./protected-middleware");
+// const auth = require("./protected-middleware");
 const userDb = require("./userModel");
+const restrict = require("../auth/restricted-middleware");
 
-router.get("/", auth, (req, res) => {
+router.get("/", restrict, (req, res) => {
   userDb
     .find()
     .then(users => {
